@@ -25,6 +25,8 @@ STUB_WEAPON_CLASS( weapon_citizenpackage, WeaponCitizenPackage, C_BaseHLCombatWe
 STUB_WEAPON_CLASS( weapon_citizensuitcase, WeaponCitizenSuitcase, C_WeaponCitizenPackage );
 
 #ifndef HL2MP
+STUB_WEAPON_CLASS( weapon_gauss, WeaponGaussGun, C_BaseHLCombatWeapon ); 
+STUB_WEAPON_CLASS( weapon_ar1, WeaponAR1, C_BaseHLCombatWeapon );
 STUB_WEAPON_CLASS( weapon_ar2, WeaponAR2, C_HLMachineGun );
 STUB_WEAPON_CLASS( weapon_frag, WeaponFrag, C_BaseHLCombatWeapon );
 STUB_WEAPON_CLASS( weapon_rpg, WeaponRPG, C_BaseHLCombatWeapon );
@@ -35,6 +37,9 @@ STUB_WEAPON_CLASS( weapon_357, Weapon357, C_BaseHLCombatWeapon );
 STUB_WEAPON_CLASS( weapon_crossbow, WeaponCrossbow, C_BaseHLCombatWeapon );
 STUB_WEAPON_CLASS( weapon_slam, Weapon_SLAM, C_BaseHLCombatWeapon );
 STUB_WEAPON_CLASS( weapon_crowbar, WeaponCrowbar, C_BaseHLBludgeonWeapon );
+STUB_WEAPON_CLASS( weapon_oicw, WeaponOICW, C_HLMachineGun );
+STUB_WEAPON_CLASS( weapon_mp5k, WeaponMP5K, C_BaseHLCombatWeapon );
+STUB_WEAPON_CLASS( weapon_sniperrifle, WeaponSniperRifle, C_BaseHLCombatWeapon );
 #ifdef HL2_EPISODIC
 STUB_WEAPON_CLASS( weapon_hopwire, WeaponHopwire, C_BaseHLCombatWeapon );
 //STUB_WEAPON_CLASS( weapon_proto1, WeaponProto1, C_BaseHLCombatWeapon );

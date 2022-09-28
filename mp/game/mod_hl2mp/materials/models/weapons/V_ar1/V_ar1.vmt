@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "models/Weapons/V_ar1/V_ar1"
+//	"$bumpmap" "models/weapons/v_ar1/V_ar1_NORMAL"
+		"$envmapmask" "models/weapons/v_ar1/V_ar1_mask"
+        "$envmap" "env_cubemap"
+//        "$normalmapalphaenvmapmask" "1"
+        "$envmaptint" "[.60 .60 .60]"
+}

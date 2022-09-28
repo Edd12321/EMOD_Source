@@ -757,11 +757,15 @@ Scheme
 		{
 			"1"
 			{
-				"name"  "HL2MP"
+				"name"  "Verdana"
 				"tall"  "46"
 				"weight" "0"
 				"additive" "0"
 				"antialias" "1"
+				"blur" "2"
+				"scanlines" "2"
+				"additive" "1"
+				"custom" "1"
 			}
 		}
 		CreditsLogo

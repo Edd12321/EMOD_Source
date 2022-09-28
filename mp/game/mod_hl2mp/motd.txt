@@ -1,0 +1,13 @@
+===========================
+ Welcome to a HL2EM server!
+===========================
+https://github.com/Edd12321/HL2EM
+
+Map rotation:
+	* dm_lockdown
+	* dm_overwatch
+	* dm_powerhouse
+	* dm_resistance
+	* dm_runoff
+	* dm_steamlab
+	* dm_underpass

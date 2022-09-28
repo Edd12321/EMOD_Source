@@ -1,5 +1,8 @@
 # Files to ignore when considering what GIT should commit.
 
+# SAPI51
+mp/src/utils/sapi51
+
 # Visual Studio 
 *.suo
 *.user

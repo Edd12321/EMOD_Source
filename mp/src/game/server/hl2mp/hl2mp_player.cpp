@@ -25,6 +25,28 @@
 #include "SoundEmitterSystem/isoundemittersystembase.h"
 
 #include "ilagcompensationmanager.h"
+#define $GIVE_ALL()                     \
+	GiveNamedItem("weapon_pistol");     \
+	GiveNamedItem("weapon_357");        \
+	                                    \
+	GiveNamedItem("weapon_mp5k");       \
+	GiveNamedItem("weapon_smg1");       \
+	GiveNamedItem("weapon_oicw");       \
+	GiveNamedItem("weapon_ar1");        \
+	GiveNamedItem("weapon_ar2");        \
+	GiveNamedItem("weapon_sniperrifle");\
+	GiveNamedItem("weapon_gauss");      \
+	                                    \
+	GiveNamedItem("weapon_shotgun");    \
+	GiveNamedItem("weapon_frag");       \
+	GiveNamedItem("weapon_crossbow");   \
+	GiveNamedItem("weapon_rpg");        \
+	GiveNamedItem("weapon_slam");       \
+	GiveNamedItem("weapon_physcannon"); \
+	GiveNamedItem("weapon_physgun");    \
+	GiveNamedItem("weapon_bugbait");    \
+
+
 
 int g_iLastCitizenModel = 0;
 int g_iLastCombineModel = 0;
@@ -175,23 +197,7 @@ void CHL2MP_Player::GiveAllItems( void )
 
 	GiveNamedItem( "weapon_crowbar" );
 	GiveNamedItem( "weapon_stunstick" );
-	GiveNamedItem( "weapon_pistol" );
-	GiveNamedItem( "weapon_357" );
-
-	GiveNamedItem( "weapon_smg1" );
-	GiveNamedItem( "weapon_ar2" );
-	
-	GiveNamedItem( "weapon_shotgun" );
-	GiveNamedItem( "weapon_frag" );
-	
-	GiveNamedItem( "weapon_crossbow" );
-	
-	GiveNamedItem( "weapon_rpg" );
-
-	GiveNamedItem( "weapon_slam" );
-
-	GiveNamedItem( "weapon_physcannon" );
-	
+	$GIVE_ALL();
 }
 
 void CHL2MP_Player::GiveDefaultItems( void )
@@ -204,19 +210,13 @@ void CHL2MP_Player::GiveDefaultItems( void )
 	CBasePlayer::GiveAmmo( 6,	"Buckshot");
 	CBasePlayer::GiveAmmo( 6,	"357" );
 
-	if ( GetPlayerModelType() == PLAYER_SOUNDS_METROPOLICE || GetPlayerModelType() == PLAYER_SOUNDS_COMBINESOLDIER )
-	{
+	if ( GetPlayerModelType() == PLAYER_SOUNDS_METROPOLICE
+	||   GetPlayerModelType() == PLAYER_SOUNDS_COMBINESOLDIER )
 		GiveNamedItem( "weapon_stunstick" );
-	}
 	else if ( GetPlayerModelType() == PLAYER_SOUNDS_CITIZEN )
-	{
 		GiveNamedItem( "weapon_crowbar" );
-	}
 	
-	GiveNamedItem( "weapon_pistol" );
-	GiveNamedItem( "weapon_smg1" );
-	GiveNamedItem( "weapon_frag" );
-	GiveNamedItem( "weapon_physcannon" );
+	$GIVE_ALL();
 
 	const char *szDefaultWeaponName = engine->GetClientConVarValue( engine->IndexOfEdict( edict() ), "cl_defaultweapon" );
 
@@ -1055,14 +1055,20 @@ bool CHL2MP_Player::ShouldRunRateLimitedCommand( const CCommand &args )
 	}
 }
 
+ConVar cl_sway_var("cl_sway_var", "0", 0, "Switches between HL2 and HL2MP sway");
+
 void CHL2MP_Player::CreateViewModel( int index /*=0*/ )
 {
+
 	Assert( index >= 0 && index < MAX_VIEWMODELS );
 
 	if ( GetViewModel( index ) )
 		return;
 
-	CPredictedViewModel *vm = ( CPredictedViewModel * )CreateEntityByName( "predicted_viewmodel" );
+	CPredictedViewModel *vm = ( CPredictedViewModel * )
+		CreateEntityByName(cl_sway_var.GetInt()
+		? "predicted_viewmodel" 
+		: "viewmodel");
 	if ( vm )
 	{
 		vm->SetAbsOrigin( GetAbsOrigin() );

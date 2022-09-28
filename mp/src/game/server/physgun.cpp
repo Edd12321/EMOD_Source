@@ -369,7 +369,7 @@ IMotionEvent::simresult_e CGravControllerPoint::Simulate( IPhysicsMotionControll
 				float angleDiff = angleDest - angleSrc;
 				angleDiff = RAD2DEG(angleDiff);
 				axis += m_targetAlignNormal * angleDiff;
-				//world = m_targetPosition;// + rotDest * (1-ratio);
+				world = m_targetPosition;// + rotDest * (1-ratio);
 //				NDebugOverlay::Line( worldRotCenter, worldRotCenter-m_targetAlignNormal*50, 255, 0, 0, false, 0.1 );
 //				NDebugOverlay::Line( worldRotCenter, worldRotCenter+tangent*50, 0, 255, 0, false, 0.1 );
 //				NDebugOverlay::Line( worldRotCenter, worldRotCenter+binormal*50, 0, 0, 255, false, 0.1 );
@@ -841,6 +841,7 @@ void CWeaponGravityGun::EffectUpdate( void )
 	{
 		m_gravCallback.ClearAutoAlign();
 	}
+	NetworkStateChanged();
 }
 
 void CWeaponGravityGun::SoundCreate( void )
@@ -1423,7 +1424,8 @@ bool CWeaponGravityGun::Reload( void )
 }
 
 #define NUM_COLLISION_TESTS 2500
-void CC_CollisionTest( const CCommand &args )
+
+static void CC_CollisionTest( const CCommand &args )
 {
 	if ( !physenv )
 		return;
