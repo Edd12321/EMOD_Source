@@ -3515,6 +3515,9 @@
       <Filter>Source Files\HL2MP\Weapons</Filter>
     </ClCompile>
     <ClCompile Include="hl2\c_weapon_gravitygun.cpp" />
+    <ClCompile Include="..\server\hl2\weapon_immolator.cpp">
+      <Filter>Source Files\HL2MP\Weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

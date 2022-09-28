@@ -45,6 +45,7 @@
 	GiveNamedItem("weapon_physcannon"); \
 	GiveNamedItem("weapon_physgun");    \
 	GiveNamedItem("weapon_bugbait");    \
+	GiveNamedItem("weapon_immolator");
 
 
 
@@ -210,10 +211,10 @@ void CHL2MP_Player::GiveDefaultItems( void )
 	CBasePlayer::GiveAmmo( 6,	"Buckshot");
 	CBasePlayer::GiveAmmo( 6,	"357" );
 
-	if ( GetPlayerModelType() == PLAYER_SOUNDS_METROPOLICE
-	||   GetPlayerModelType() == PLAYER_SOUNDS_COMBINESOLDIER )
+	//if ( GetPlayerModelType() == PLAYER_SOUNDS_METROPOLICE
+	//||   GetPlayerModelType() == PLAYER_SOUNDS_COMBINESOLDIER )
 		GiveNamedItem( "weapon_stunstick" );
-	else if ( GetPlayerModelType() == PLAYER_SOUNDS_CITIZEN )
+	//else if ( GetPlayerModelType() == PLAYER_SOUNDS_CITIZEN )
 		GiveNamedItem( "weapon_crowbar" );
 	
 	$GIVE_ALL();

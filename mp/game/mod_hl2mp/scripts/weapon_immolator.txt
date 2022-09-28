@@ -1,0 +1,86 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#HL2_IMMOLATOR"
+	"viewmodel"			"models/weapons/v_cremator.mdl"
+	"playermodel"			"models/weapons/w_immolator.mdl"
+	"anim_prefix"			"immolator"
+	"bucket"			"5"
+	"bucket_position"		"1"
+	"damage"			"20"
+
+	// "clip_size"				"-1"
+	// "clip2_size"			"-1"
+	// "primary_ammo"			"None"
+	// "secondary_ammo"		"Gasoline"
+	// "default_clip2"			"100"
+
+	"clip_size"				"200"
+	"primary_ammo"			"Buckshot"
+	//shotgun ammo is a placeholder, subject to change
+	"secondary_ammo"		"None"
+	"default_clip"			"99"
+
+	"weight"			"2"
+	"item_flags"			"0"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Immolator.Single"
+		"single_shot_npc"	"Weapon_Immolator.Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"sprites/w_icons4b"
+				"x"		"128"
+				"y"		"0"
+				"width"		"128"
+				"height"	"64"
+		}
+		"weapon_s"
+		{
+				"file"		"sprites/w_icons4b"
+				"x"		"128"
+				"y"		"0"
+				"width"		"128"
+				"height"	"64"
+		}
+		"ammo"
+		{
+				"file"		"sprites/a_icons1"
+				"x"			"55"
+				"y"			"60"
+				"width"		"73"
+				"height"	"15"
+		}
+		"ammo2"
+		{
+				"file"		"sprites/a_icons1"
+				"x"			"55"
+				"y"			"110"
+				"width"		"73"
+				"height"	"20"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}

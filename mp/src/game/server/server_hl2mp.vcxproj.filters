@@ -3575,6 +3575,9 @@
       <Filter>Source Files\HL2 DLL</Filter>
     </ClCompile>
     <ClCompile Include="physgun.cpp" />
+    <ClCompile Include="hl2\weapon_immolator.cpp">
+      <Filter>Source Files\HL2MP\Weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -15,7 +15,7 @@ $illumposition -3.776 -30.934 -8.238
 $cdmaterials "models\Weapons\V_hand\"
 $cdmaterials "models\Weapons\V_sniper\"
 
-$attachment "0" "Bip01 R Hand" 49.42 2.18 6.12 rotate 1.06 0.88 -0.68
+$attachment "muzzle" "Bip01 R Hand" 49.42 2.18 6.12 rotate 1.06 0.88 -0.68
 
 $cbox 0 0 0 0 0 0
 
@@ -99,7 +99,7 @@ $sequence "sniper_idle01" {
 $sequence "sniper_fire" {
 	"a_sniper_fire"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event 5001 1 "51" }
+	{ event AE_MUZZLEFLASH 0 "SHOTGUN MUZZLE" }
 	{ event 6001 1 "1" }
 	fadein 0.2
 	fadeout 0.2
