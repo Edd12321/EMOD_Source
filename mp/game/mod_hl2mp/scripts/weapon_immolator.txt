@@ -16,8 +16,7 @@ WeaponData
 	// "default_clip2"			"100"
 
 	"clip_size"				"200"
-	"primary_ammo"			"Buckshot"
-	//shotgun ammo is a placeholder, subject to change
+	"primary_ammo"			"Gasoline"
 	"secondary_ammo"		"None"
 	"default_clip"			"99"
 

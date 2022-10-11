@@ -25,7 +25,6 @@
  that the env_flare class is actually found in weapon_flaregun.cpp 
  and is really a repurposed piece of ammunition. (env_flare isn't the 
  rod-like safety flare prop, but rather the bit of flame on the end.)
-
  You will have some difficulty making it work here, because CFlare 
  does not inherit from CFire and will thus not be enumerated by 
  CFireSphere::EnumElement(). In order to have flares be detected and 
@@ -33,9 +32,7 @@
  of CFire into an interface class from which both CFire and CFlare 
  inherit. You will also need to modify CFireSphere::EnumElement so that
  it properly disambiguates between fires and flares.
-
  For some partial work towards this end, see changelist 192474.
-
  ********************************************************************/
 
 
@@ -390,16 +387,13 @@ void CFlare::FlareTouch( CBaseEntity *pOther )
 	{
 		/*
 			The Flare is the iRifle round right now. No damage, just ignite. (sjb)
-
 		//Damage is a function of how fast the flare is flying.
 		int iDamage = GetAbsVelocity().Length() / 50.0f;
-
 		if ( iDamage < 5 )
 		{
 			//Clamp minimum damage
 			iDamage = 5;
 		}
-
 		//Use m_pOwner, not GetOwnerEntity()
 		pOther->TakeDamage( CTakeDamageInfo( this, m_pOwner, iDamage, (DMG_BULLET|DMG_BURN) ) );
 		m_flNextDamage = gpGlobals->curtime + 1.0f;
@@ -657,8 +651,6 @@ void CFlare::AddToActiveFlares( void )
 	}
 }
 
-#if 0
-
 IMPLEMENT_SERVERCLASS_ST(CFlaregun, DT_Flaregun)
 END_SEND_TABLE()
 
@@ -751,5 +743,3 @@ void CFlaregun::SecondaryAttack( void )
 
 	WeaponSound( SINGLE );
 }
-
-#endif

@@ -28,6 +28,7 @@
 #define $GIVE_ALL()                     \
 	GiveNamedItem("weapon_pistol");     \
 	GiveNamedItem("weapon_357");        \
+	GiveNamedItem("weapon_flaregun");   \
 	                                    \
 	GiveNamedItem("weapon_mp5k");       \
 	GiveNamedItem("weapon_smg1");       \
@@ -35,7 +36,8 @@
 	GiveNamedItem("weapon_ar1");        \
 	GiveNamedItem("weapon_ar2");        \
 	GiveNamedItem("weapon_sniperrifle");\
-	GiveNamedItem("weapon_gauss");      \
+	GiveNamedItem("weapon_flaregun");   \
+	/*GiveNamedItem("weapon_gauss");*/  \
 	                                    \
 	GiveNamedItem("weapon_shotgun");    \
 	GiveNamedItem("weapon_frag");       \
@@ -379,7 +381,7 @@ void CHL2MP_Player::SetPlayerTeamModel( void )
 
 		char szReturnString[512];
 
-		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel %s\n", szModelName );
+		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel \"%s\"\n", szModelName );
 		engine->ClientCommand ( edict(), szReturnString );
 	}
 
@@ -430,7 +432,7 @@ void CHL2MP_Player::SetPlayerModel( void )
 			pszCurrentModelName = "models/Combine_Soldier.mdl";
 		}
 
-		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel %s\n", pszCurrentModelName );
+		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel \"%s\"\n", pszCurrentModelName );
 		engine->ClientCommand ( edict(), szReturnString );
 
 		szModelName = pszCurrentModelName;
@@ -480,7 +482,7 @@ void CHL2MP_Player::SetPlayerModel( void )
 
 		char szReturnString[512];
 
-		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel %s\n", szModelName );
+		Q_snprintf( szReturnString, sizeof (szReturnString ), "cl_playermodel \"%s\"\n", szModelName );
 		engine->ClientCommand ( edict(), szReturnString );
 	}
 

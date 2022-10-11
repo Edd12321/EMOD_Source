@@ -1071,6 +1071,7 @@ exit 1
     <ClCompile Include="globalstate.cpp" />
     <ClCompile Include="grenadethrown.cpp" />
     <ClCompile Include="guntarget.cpp" />
+    <ClCompile Include="hl2\weapon_flaregun.cpp" />
     <ClCompile Include="hl2\weapon_immolator.cpp" />
     <ClCompile Include="h_ai.cpp" />
     <ClCompile Include="h_cycler.cpp" />
@@ -1420,7 +1421,6 @@ exit 1
     <ClCompile Include="hl2\npc_missiledefense.cpp" />
     <ClCompile Include="hl2\vehicle_apc.cpp" />
     <ClCompile Include="hl2\weapon_cguard.cpp" />
-    <ClCompile Include="hl2\weapon_flaregun.cpp" />
     <ClCompile Include="hl2mp\hl2mp_bot_temp.cpp" />
     <ClCompile Include="hl2mp\hl2mp_client.cpp" />
     <ClCompile Include="hl2mp\hl2mp_cvars.cpp" />

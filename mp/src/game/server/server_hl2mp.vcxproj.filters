@@ -3271,9 +3271,6 @@
     <ClCompile Include="hl2\weapon_cguard.cpp">
       <Filter>Source Files\HL2 DLL\unused</Filter>
     </ClCompile>
-    <ClCompile Include="hl2\weapon_flaregun.cpp">
-      <Filter>Source Files\HL2 DLL\unused</Filter>
-    </ClCompile>
     <ClCompile Include="hl2mp\hl2mp_bot_temp.cpp">
       <Filter>Source Files\HL2MP</Filter>
     </ClCompile>
@@ -3576,6 +3573,9 @@
     </ClCompile>
     <ClCompile Include="physgun.cpp" />
     <ClCompile Include="hl2\weapon_immolator.cpp">
+      <Filter>Source Files\HL2MP\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="hl2\weapon_flaregun.cpp">
       <Filter>Source Files\HL2MP\Weapons</Filter>
     </ClCompile>
   </ItemGroup>
