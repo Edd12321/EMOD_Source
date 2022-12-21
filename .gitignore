@@ -17,7 +17,7 @@ mp/src/utils/sapi51
 *.lastbuildstate
 vc100.pdb
 ipch
-#*.sdf
+*.sdf
 #*.opensdf
 *.idb
 #*.vcxproj

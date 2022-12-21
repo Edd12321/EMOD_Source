@@ -285,12 +285,12 @@ CWeaponOICW::SecondaryAttack(void)
 	if ((pPlayer->GetAmmoCount(m_iSecondaryAmmoType) <= 0) || (pPlayer->GetWaterLevel() == 3)) {
 		SendWeaponAnim(ACT_VM_DRYFIRE);
 		BaseClass::WeaponSound(EMPTY);
-		m_flNextSecondaryAttack = gpGlobals->curtime + 0.5f;
+		m_flNextSecondaryAttack = gpGlobals->curtime;// + 0.5f;
 
 		return;
 	}
 
-	if (m_bInReload)
+	//if (m_bInReload)
 		m_bInReload = false;
 
 	// MUST call sound before removing a round from the clip of a CMachineGun
