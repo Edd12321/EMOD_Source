@@ -12,6 +12,7 @@ This mod comes pre-installed with [Botrix](https://github.com/borzh/botrix). You
 `botrix bot add`
 
 ## Screenshots
+![Gameplay demo #0](res/jumpspace.png)
 ![Gameplay demo #1](res/firefight1.png)
 ![Dev console](res/console.png)
 ![Gameplay demo #2](res/firefight2.png)
